@@ -1,0 +1,13 @@
+.header{
+  height: 50px;
+  background: rgba(165, 213, 254, 0.4);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu {
+  padding: 10px;
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+}

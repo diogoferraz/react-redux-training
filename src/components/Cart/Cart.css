@@ -1,0 +1,13 @@
+.cart-item {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+}
+.content-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content-remove {
+  align-self: flex-end;
+}

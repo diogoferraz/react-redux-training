@@ -1,0 +1,21 @@
+.main {
+  flex: 1 0 auto;
+  padding: 20px;
+}
+
+.content {
+  padding: 20px;
+  padding-bottom: 50px;
+}
+
+.item {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.item-header,
+.item-details {
+  display: flex;
+  flex-direction: column;
+}
