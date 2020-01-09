@@ -46,7 +46,7 @@ const Display = () => {
     <main className="main">
       <div className="content">
         <ul>
-          {display.map((element, index) => renderItem(element, index))}
+          {display && display.map((element, index) => renderItem(element, index))}
         </ul>
       </div>
     </main>

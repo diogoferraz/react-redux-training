@@ -32,9 +32,9 @@ const Cart = () => {
   return (
     <Modal show={showModal} modalClosed={() => dispatch(appActions.closeModal())}>
       <div className="content-modal">
-        <div className="content-remove"><button type="submit" onClick={() => dispatch(cartActions.clear())}>Remove All</button></div>
-        {cartList.map((item, index) => list(item, index))}
-        <div>Total Price: {handleTotalPrice()}</div>
+        <div className="content-remove"><button id="remove-button" type="submit" onClick={() => dispatch(cartActions.clear())}>Remove All</button></div>
+        {cartList && cartList.map((item, index) => list(item, index))}
+        <div>Total Price: {cartList && handleTotalPrice()}</div>
       </div>
     </Modal>
   )

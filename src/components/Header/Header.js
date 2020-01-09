@@ -11,7 +11,7 @@ const Header = () => {
   return(
     <header className="header">
       <div className="menu">
-        <span onClick={() => dispatch(appActions.openModal())}><img src={ShopCart} alt=""/></span>
+        <span id="cart" onClick={() => dispatch(appActions.openModal())}><img src={ShopCart} alt=""/></span>
         <span><img src={Whishlist} alt=""/><span>{whishlist ? whishlist.length : 0}</span></span>
       </div>
     </header>

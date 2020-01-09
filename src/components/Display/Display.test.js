@@ -9,6 +9,7 @@ import * as ReactReduxHooks from '../../hooks/react-redux';
 describe('<Display />', () => {
   let store;
   let wrapper;
+  let useEffect;
 
   const mockUseEffect = () => {
     useEffect.mockImplementationOnce((f) => f());
