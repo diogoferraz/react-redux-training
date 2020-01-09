@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../Header/Header';
-import Listing from '../Listing/Listing';
+import Display from '../Display/Display';
 import Cart from '../Cart/Cart';
 import './App.css';
 
@@ -9,7 +9,7 @@ function App() {
     <div className="app">
       <Header />
       <Cart/>
-      <Listing />
+      <Display />
       <footer className="footer">
         Shop Project
       </footer>

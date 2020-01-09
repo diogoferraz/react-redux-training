@@ -3,9 +3,9 @@ import { useSelector, useDispatch } from '../../hooks/react-redux';
 import appActions from '../../actions/appActions';
 import cartActions from '../../actions/cartActions';
 import wishlistActions from '../../actions/whislistActions';
-import './Listing.css';
+import './Display.css';
 
-const Listing = () => {
+const Display = () => {
   const dispatch = useDispatch();
   const { display, cartList, whishlist } = useSelector((state) => ({ 
     display: state.appReducer.display,
@@ -53,4 +53,4 @@ const Listing = () => {
   )
 }
 
-export default Listing;
+export default Display;
