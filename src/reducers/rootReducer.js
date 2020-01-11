@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import appReducer from './appReducer';
 import cartReducer from './cartReducer';
-import wishlistReducer from './whishlistReducer';
+import wishlistReducer from './wishlistReducer';
 
 const rootReducer = combineReducers({
   appReducer,

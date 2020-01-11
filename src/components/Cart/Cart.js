@@ -7,16 +7,13 @@ import "./Cart.css";
 
 const Cart = () => {
   const dispatch = useDispatch();
-  const { showModal, cartList } = useSelector((state) => ({ 
+  const { showModal, cart } = useSelector((state) => ({ 
     showModal: state.appReducer.showModal,
-    cartList: state.cartReducer.cart, 
+    cart: state.cartReducer.cart, 
   }));
 
   const handleTotalPrice = () => {
-    return cartList.reduce((a, b) => {
-      const input = parseFloat(b.price);
-      return a + input
-    }, 0)
+    return cart.reduce((a, b) => parseFloat(b.price) + a, 0)
   }
 
   const list = (cartItem, index) => {
@@ -25,7 +22,7 @@ const Cart = () => {
         <span className="item-image">{cartItem.image}</span>
         <span className="item-title">Title: {cartItem.title}</span>
         <span className="item-price">Price: {cartItem.price}</span>
-        <button type="submit" onClick={() => dispatch(cartActions.remove(cartItem.id))}>Remove</button>
+        <button id="remove-item" type="submit" onClick={() => dispatch(cartActions.remove(cartItem.id))}>Remove</button>
       </div>
     );
   }
@@ -33,8 +30,8 @@ const Cart = () => {
     <Modal show={showModal} modalClosed={() => dispatch(appActions.closeModal())}>
       <div className="content-modal">
         <div className="content-remove"><button id="remove-button" type="submit" onClick={() => dispatch(cartActions.clear())}>Remove All</button></div>
-        {cartList && cartList.map((item, index) => list(item, index))}
-        <div>Total Price: {cartList && handleTotalPrice()}</div>
+        {cart && cart.map((item, index) => list(item, index))}
+        <div className="total-price">Total Price: {cart && handleTotalPrice()}</div>
       </div>
     </Modal>
   )
